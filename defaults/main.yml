@@ -1,2 +1,4 @@
 ---
-# defaults file for syncthing-gtk
+syncthing_gtk_nautilus: true
+syncthing_gtk_nemo: false
+syncthing_gtk_caja: false

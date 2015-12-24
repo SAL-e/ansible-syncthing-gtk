@@ -1,2 +1,9 @@
 ---
-# handlers file for syncthing-gtk
+- name: restart nautilus
+  command: nautilus -q
+
+- name: restart nemo
+  command: nemo -q
+
+- name: restart caja
+  command: caja -q

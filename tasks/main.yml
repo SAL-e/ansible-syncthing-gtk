@@ -1,2 +1,24 @@
 ---
-# tasks file for syncthing-gtk
+- name: install Python binding for Nautilus
+  apt: pkg=python-nautilus state=present update_cache=yes cache_valid_time=300
+  when: syncthing_gtk_nautilus
+  notify:
+    - restart nautilus
+
+- name: install Python binding for Nemo
+  apt: pkg=python-nemo state=present update_cache=yes cache_valid_time=300
+  when: syncthing_gtk_nemo
+  notify:
+    - restart nemo
+
+- name: install Python binding for Caja
+  apt: pkg=python-caja state=present update_cache=yes cache_valid_time=300
+  when: syncthing_gtk_caja
+  notify:
+    - restart caja
+
+- name: add main Web Upd8 PPA maintained by http://www.webupd8.org/
+  apt_repository: repo=ppa:nilarimogard/webupd8 state=present
+
+- name: install syncthing-gtk (syncthing desktop integration)
+  apt: pkg=syncthing-gtk state=present update_cache=yes

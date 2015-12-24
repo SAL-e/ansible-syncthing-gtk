@@ -36,3 +36,12 @@ Author Information
 ------------------
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+
+Credits
+-------
+
+https://github.com/syncthing/syncthing-gtk
+
+http://www.webupd8.org/2014/12/syncthing-gtk-gets-https-support.html
+
+http://www.webupd8.org/2015/02/syncthing-gtk-06-released-with-nautilus.html
